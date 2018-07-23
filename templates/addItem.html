@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}Add Product{% endblock %}
+{% block content  %}
+<div class="container-fluid">
+
+<div class="container-fluid bg-3">
+  <div class="panel panel-default">
+  <div class="panel-heading">Add a new product</div>
+  <div class="panel-body">
+  <form class="" action="{{url_for("addItem",vendor_name=vendor_name)}}" method="post">
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input name="name" placeholder="" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label for="Desc">Description</label>
+      <input name="desc" type="description" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="Desc">Stock</label>
+      <input name="stock" type="description" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input name="price" type="description" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+</div><br>
+</div>
+{% endblock %}

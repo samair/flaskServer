@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}Register{% endblock %}
+{% block content  %}
+<div class="container-fluid">
+
+<div class="container-fluid bg-3">
+  <div class="panel panel-default">
+  <div class="panel-heading">Edit Details of {{item_name}}</div>
+  <div class="panel-body">
+  <form class="" action="{{url_for("editItem",item_id=item_id)}}" method="post">
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input name="name" placeholder="{{item_name}}" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label for="Desc">Description</label>
+      <input name="desc" type="description" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="Desc">Stock</label>
+      <input name="stock" type="description" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input name="price" type="description" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+</div><br>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+{% endblock %}

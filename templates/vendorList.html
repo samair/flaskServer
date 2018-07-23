@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}Register{% endblock %}
+{% block content  %}
+<div class="container-fluid">
+
+<div class="container-fluid bg-3">
+  <div class="panel panel-default">
+  <div class="panel-heading">Listed Vendors</div>
+  <div class="panel-body">
+    <div class="row">
+      {% for i in vendors %}
+      <div class="col-sm-3">
+        <div class="well">
+        <a href="{{url_for('vendor',vendor_id=i.id)}}"><p>{{i.name}}</p></a>
+        </div>
+      </div>
+      {% endfor %}
+</div>
+</div>
+</div><br>
+</div>
+{% endblock %}

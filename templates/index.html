@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block content  %}
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Welcome to GEEK SHACK</h1>
+    <p><a href="{{url_for('register')}}">Join us now..</a></p>
+  </div>
+</div>
+
+<div class="container-fluid bg-3 text-center">
+  <h3>Recently Added Vendors..</h3><br>
+  <div class="row">
+    {% for i in vendors %}
+    <div class="col-sm-3">
+      <div class="well">
+      <a href="{{url_for('vendor', vendor_id=i.id)}}">
+      <p>{{i.name}}</p>
+      <img src="../static/logo.png" class="img-responsive" style="width:50%" alt="Image"></a>
+    </div>
+    </div>
+    {% endfor %}
+    </div>
+</div><br>
+
+
+
+<footer class="container-fluid text-center">
+  <p>Copyrights reserved</p>
+</footer>
+{% endblock %}
