@@ -7,6 +7,12 @@
   <div class="panel panel-default">
   <div class="panel-heading">Listed Vendors</div>
   <div class="panel-body">
+    {% if message != " " %}
+    <div class="alert alert-success">
+      <strong>Success! {{message}}</strong>
+    </div>
+
+    {% endif %}
     <div class="row">
       {% for i in vendors %}
       <div class="col-sm-3">

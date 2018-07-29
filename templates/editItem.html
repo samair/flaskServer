@@ -10,19 +10,19 @@
   <form class="" action="{{url_for("editItem",item_id=item_id)}}" method="post">
     <div class="form-group">
       <label for="Name">Name</label>
-      <input name="name" placeholder="{{item_name}}" class="form-control" >
+      <input name="name" placeholder="{{item_name}}" class="form-control" pattern=".{6,}"   title="6 characters minimum">
     </div>
     <div class="form-group">
       <label for="Desc">Description</label>
-      <input name="desc" type="description" class="form-control">
+      <input name="desc" type="description" class="form-control" pattern=".{10,}"   title="10 characters minimum">
     </div>
     <div class="form-group">
       <label for="Desc">Stock</label>
-      <input name="stock" type="description" class="form-control">
+      <input name="stock" type="number"  type="description" class="form-control" pattern=".{6,}"   min="0" step="1"  title="please add stock">
     </div>
     <div class="form-group">
       <label for="price">Price</label>
-      <input name="price" type="description" class="form-control">
+      <input name="price" type="description" class="form-control" type="number"   min="1" max="9999" step="0.1" size="4" title="minimum 1 dollar">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

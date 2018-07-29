@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}Not authorised{% endblock %}
+{% block content %}
+  <h1> OOPS...</h1>
+  <p> Something wrong with your input.. please retry<p>
+  <p><a href="{{ url_for('index') }}"> go somewhere nice</a>
+{% endblock %}

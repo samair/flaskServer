@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block title %}Not authorised{% endblock %}
+{% block content %}
+<meta http-equiv="refresh" content="0" url="index.html">
+  <h1>Already logged in.. </h1>
+  <p> Go back to your account page ...
+  <a href="{{ url_for('account',email_id=email_id) }}"> My Account</a> </p>
+{% endblock %}

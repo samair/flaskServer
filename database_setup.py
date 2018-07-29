@@ -18,7 +18,7 @@ class User(Base):
 
     def verify_password(self, password):
         return pwd_context.verify(password, self.password_hash)
-        
+
 class Vendor(Base):
     __tablename__ = "vendor"
 
@@ -26,6 +26,12 @@ class Vendor(Base):
     name = Column(String, nullable=False,unique=True)
     user_id=Column(Integer, ForeignKey("user.id"))
     user = relationship(User)
+    @property
+    def serialize(self):
+        return {
+            'name': self.name,
+            'vendorID':self.id
+        }
 
 class Items(Base):
     __tablename__ = "items"
@@ -37,7 +43,16 @@ class Items(Base):
     stock = Column(Integer)
     vendor_id = Column(Integer, ForeignKey("vendor.id"))
     vendor = relationship(Vendor)
-
+    @property
+    def serialize(self):
+        return {
+            'name': self.name,
+            'vendor_id': self.vendor_id,
+            'description': self.description,
+            'Product_id': self.id,
+            'price': self.price,
+            'stock': self.stock
+        }
 
 
 engine = create_engine("sqlite:///geekshack.db")

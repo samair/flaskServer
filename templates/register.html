@@ -11,7 +11,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Vendor Name:</label>
     <div class="col-sm-3">
-      <input type="text" class="form-control" name="Name" placeholder="Enter Name">
+      <input type="text" class="form-control" name="Name" placeholder="Enter Name" pattern=".{4,}"   required title="4 characters minimum">
     </div>
   </div>
   <div class="form-group">
@@ -24,7 +24,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">Password:</label>
     <div class="col-sm-3">
-      <input type="password" class="form-control" name="pwd" placeholder="Enter password">
+      <input type="password" class="form-control" name="pwd" placeholder="Enter password" pattern=".{5,}"   required title="5 characters minimum">
     </div>
   </div>
 

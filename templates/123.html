@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}Not authorised{% endblock %}
+{% block content %}
+  <h1>Already logged in.. </h1>
+  <p> Go back to your account page ...
+  <a href="{{ url_for('index') }}"> My Account</a> </p>
+{% endblock %}
