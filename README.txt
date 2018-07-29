@@ -10,6 +10,11 @@ Features:
 4. Vendor list via html and json
 5. User registration
 
+HOW TO USE:
+Run
+python3 populate_db.py
+to get sample users and vendor information.
+
 Used :
 - Bootstrap for css and js
 - SQL lite
