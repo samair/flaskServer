@@ -18,3 +18,5 @@ to get sample users and vendor information.
 Used :
 - Bootstrap for css and js
 - SQL lite
+
+hosted @ http://35.200.206.250/
